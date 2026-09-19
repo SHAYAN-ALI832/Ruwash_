@@ -14,62 +14,60 @@ export default function Navbar() {
       <div className="mx-auto flex h-[70px] max-w-7xl items-center justify-between px-5 lg:px-8">
 
         {/* Logo */}
-        <Link
-          to="/"
+        <a
+          href="#home"
           onClick={closeMenu}
           className="text-2xl font-extrabold tracking-tight text-blue-600"
         >
           RUWASH
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-7 md:flex">
-
-          <a
-            href="#home"
-            className="text-sm font-medium text-gray-700 transition hover:text-blue-600"
-          >
-            Home
-          </a>
+        <div className="hidden items-center font-bold text-3xl gap-10 md:flex">
 
           <a
             href="#products"
-            className="text-sm font-medium text-gray-700 transition hover:text-blue-600"
+            className="group relative text-sm font-bold text-gray-700 transition hover:text-blue-600"
           >
             Products
+            <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full" />
           </a>
 
           <a
             href="#about"
-            className="text-sm font-medium text-gray-700 transition hover:text-blue-600"
+            className="group relative text-sm font-bold text-gray-700 transition hover:text-blue-600"
           >
-            About
+            Why Ruwash
+            <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full" />
           </a>
 
           <a
-            href="#where-to-buy"
-            className="text-sm font-medium text-gray-700 transition hover:text-blue-600"
+            href="#whyRuwash"
+            className="group relative text-sm font-bold text-gray-700 transition hover:text-blue-600"
           >
-            Where to Buy
+            Ingredients
+            <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full" />
           </a>
 
           <a
             href="#contact"
-            className="text-sm font-medium text-gray-700 transition hover:text-blue-600"
+            className="group relative text-sm font-bold text-gray-700 transition hover:text-blue-600"
           >
             Contact
+            <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full" />
+          </a>
+
+          <a
+            href="#find-us"
+            className="rounded-full bg-blue-600 px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
+            Find Us
           </a>
 
         </div>
 
         {/* Order Button */}
-        <a
-          href="#contact"
-          className="hidden items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 md:flex"
-        >
-          Order Now
-          <FiArrowRight size={17} />
-        </a>
+       
 
         {/* Mobile Menu Button */}
         <button
@@ -87,14 +85,6 @@ export default function Navbar() {
           <div className="flex flex-col gap-1">
 
             <a
-              href="#home"
-              onClick={closeMenu}
-              className="rounded-lg px-3 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600"
-            >
-              Home
-            </a>
-
-            <a
               href="#products"
               onClick={closeMenu}
               className="rounded-lg px-3 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600"
@@ -107,15 +97,15 @@ export default function Navbar() {
               onClick={closeMenu}
               className="rounded-lg px-3 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600"
             >
-              About
+              Why Ruwash
             </a>
 
             <a
-              href="#where-to-buy"
+              href="#whyRuwash"
               onClick={closeMenu}
               className="rounded-lg px-3 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600"
             >
-              Where to Buy
+              Ingredients
             </a>
 
             <a
@@ -127,13 +117,21 @@ export default function Navbar() {
             </a>
 
             <a
+              href="#find-us"
+              onClick={closeMenu}
+              className="rounded-lg px-3 py-3 font-semibold text-blue-600 hover:bg-gray-50"
+            >
+              Find Us
+            </a>
+
+            {/* <a
               href="#contact"
               onClick={closeMenu}
               className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-3 font-semibold text-white hover:bg-blue-700"
             >
               Order Now
               <FiArrowRight size={17} />
-            </a>
+            </a> */}
 
           </div>
         </div>

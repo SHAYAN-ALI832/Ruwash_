@@ -1,142 +1,137 @@
-import React from 'react';
-import { FaStar } from 'react-icons/fa';
+import { Droplet, Clock, Heart, Waves, Wind, ArrowLeft } from "lucide-react";
+import Soap from '../assets/soap1.jpeg';
 
-export default function CombinedSections() {
-  const tips = [
-    {
-      title: "How Much Powder to Use?",
-      description: "Learn the ideal scoop measurement for full loads vs quick washes to save money.",
-    },
-    {
-      title: "Ultimate Stain Removal",
-      description: "Quick tricks to remove grease, tea, and ink stains using Ruwash.",
-    },
-    {
-      title: "Keeping Colors Bright",
-      description: "Best practices for washing colored clothes without fading.",
-    },
-  ];
+const FEATURES = [
+  {
+    icon: Droplet,
+    title: "Deep Cleaning Power",
+    description:
+      "A builder-and-surfactant formula that works into fabric to lift dirt, not just mask it.",
+  },
+  {
+    icon: Clock,
+    title: "Tough on Stains",
+    description:
+      "The new improved formula targets set-in stains so colour and shine come back, wash after wash.",
+  },
+  {
+    icon: Heart,
+    title: "Safe for Hands & Clothes",
+    description:
+      "Gentle enough for daily hand-washing, tough enough for the family's heaviest loads.",
+  },
+  {
+    icon: Waves,
+    title: "Effective in Hard Water",
+    description:
+      "Sequestrants keep the formula performing across Pakistan's varying water conditions.",
+  },
+  {
+    icon: Wind,
+    title: "Fresh, Long-Lasting Scent",
+    description:
+      "A light floral fragrance that lingers in the fabric long after the clothes have dried.",
+  },
+];
 
-  const testimonials = [
-    {
-      quote: "Removed tough tea stains from my kids' uniforms instantly. Highly recommended!",
-      author: "Fatima A.",
-    },
-    {
-      quote: "The Rs. 50 pack is super convenient. Smells fantastic and cleans really well.",
-      author: "Tariq M.",
-    },
-    {
-      quote: "Gentle on hands and great quality for the price. Ruwash is now our main detergent.",
-      author: "Saima K.",
-    },
-  ];
-
+export default function WhyRuwash() {
   return (
-    <div className="w-full bg-slate-50 flex flex-col font-sans">
-      
-      {/* 1. Why Families Trust Ruwash Section */}
-      <section className="w-full py-20 px-6 md:px-16 bg-white border-b border-slate-100 flex items-center justify-center">
-        <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Left Text & Small Cards */}
-          <div className="flex flex-col items-start text-left">
-            <div className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-4 flex items-center gap-1.5 border border-blue-100 shadow-sm">
-              <span>MADE IN PAKISTAN</span>
+    <section className="bg-white py-20 font-['Inter']">
+      <div className="mx-auto max-w-6xl px-6">
+        {/* Header */}
+        <p className="text-[13px] font-bold uppercase tracking-[2.2px] text-[#0057a8]">
+          WHY RUWASH
+        </p>
+
+        <h2 className="mt-3 max-w-[580px] text-[32px] font-extrabold leading-[1.15] tracking-[-0.6px] text-[#002f50] sm:text-[40px]">
+          Built for the way Pakistani<br className="hidden sm:block" />
+          homes actually wash.
+        </h2>
+
+        {/* Wave underline */}
+        <svg
+          className="mt-3 h-[14px] w-[160px]"
+          viewBox="0 0 160 14"
+          fill="none"
+        >
+          <path
+            d="M2 9C25 2.5 50 1.5 75 8C100 14.5 125 13 145 6.5C152 3.5 156 3 158 5"
+            stroke="#006dcc"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+        </svg>
+
+        {/* Feature cards */}
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {FEATURES.map(({ icon: Icon, title, description }) => (
+            <div
+              key={title}
+              className="rounded-2xl border border-slate-100 bg-gradient-to-b from-[#f0f7ff] to-white p-6 shadow-[0_4px_20px_-4px_rgba(0,70,130,0.06)]"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#00519b]">
+                <Icon size={20} strokeWidth={2.2} className="text-white" />
+              </div>
+              <h3 className="mt-5 text-[20px] font-sans font-bold text-[#002f50]">
+                {title}
+              </h3>
+              <p className="mt-2 text-[16px] font-sans  leading-relaxed text-slate-600">
+                {description}
+              </p>
             </div>
+          ))}
 
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-              Why Families Trust Ruwash
-            </h2>
+          {/* Made & Packed in Pakistan card */}
+          <div className="rounded-2xl border border-slate-100 bg-gradient-to-b from-[#f0f7ff] to-white p-6 shadow-[0_4px_20px_-4px_rgba(0,70,130,0.06)]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#00519b]">
+              <span className="text-[15px] font-bold text-white">A</span>
+            </div>
+            <h3 className="mt-5 text-[16px] font-bold text-[#002f50]">
+              Made &amp; Packed in Pakistan
+            </h3>
+            <p className="mt-2 text-[14px] leading-relaxed text-slate-600">
+              Produced by ARS Enterprise in Mardan, KP — quality checked
+              before it reaches your home.
+            </p>
+          </div>
+        </div>
 
-            <p className="text-slate-600 text-base mb-8 leading-relaxed">
-              Ruwash was formulated to bring world-class laundry performance to local Pakistani homes at prices that make sense. Our high-efficiency formula is crafted with quality-certified ingredients.
+        {/* Promo Banner */}
+        <div className="relative mt-16 overflow-hidden rounded-[28px]">
+          <img
+            src={Soap}
+            alt="RUWASH beauty soap — soft, smooth & glowing skin"
+            className="h-full min-h-[340px] w-full object-cover object-center"
+          />
+
+          {/* Dark gradient overlay (left side) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a0a2e]/90 via-[#1a0a2e]/55 to-transparent" />
+
+          {/* Content */}
+          <div className="absolute inset-0 flex flex-col justify-center px-8 py-12 sm:px-12 sm:py-16 lg:max-w-xl">
+            <p className="text-[12px] font-bold uppercase tracking-[1.8px] text-[#f9a8d4]">
+              Beauty Soap · New Improved Formula
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-              <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl text-center shadow-sm">
-                <h4 className="text-blue-600 font-extrabold text-2xl mb-1">100%</h4>
-                <p className="text-slate-500 text-xs font-medium">Quality Certified</p>
-              </div>
-              <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl text-center shadow-sm">
-                <h4 className="text-blue-600 font-extrabold text-xl mb-1">Top Grade</h4>
-                <p className="text-slate-500 text-xs font-medium">Fabric Safety</p>
-              </div>
-            </div>
+            <h3 className="mt-3 text-[28px] font-extrabold leading-[1.2] text-white sm:text-[34px]">
+              Khalis narmi, qudrati<br />chamak.
+            </h3>
+
+            <p className="mt-1 text-[15px] text-white/80" dir="rtl">
+              خالص نرمی، قدرتی چمک
+            </p>
+
+            <p className="mt-4 max-w-md text-[15px] leading-relaxed text-white/85">
+              Enriched with milk protein and rose extract, for skin that
+              feels as good as it looks — every single day.
+            </p>
+
+            <button className="mt-7 w-fit rounded-xl bg-[#00519b] px-6 py-3.5 text-[14px] font-semibold text-white shadow-lg transition hover:bg-[#003f7b]">
+              Ask About Stockists
+            </button>
           </div>
-
-          {/* Right Quote Card */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="bg-[#eef6fc] border border-blue-100/60 w-full max-w-lg p-8 md:p-12 rounded-3xl shadow-sm flex items-center justify-center text-center">
-              <p className="text-slate-700 italic font-medium text-base md:text-lg leading-relaxed">
-                &ldquo;Crafted with national pride, delivering pristine cleanliness to every household.&rdquo;
-              </p>
-            </div>
-          </div>
-
         </div>
-      </section>
-
-      {/* 2. Laundry Tips & Guides Section */}
-      <section className="w-full py-20 px-6 md:px-16 flex flex-col items-center justify-center border-b border-slate-100">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">
-            Laundry Tips & Guides
-          </h2>
-        </div>
-
-        <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-6">
-          {tips.map((tip, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-slate-100 flex flex-col items-start text-left"
-            >
-              <h3 className="text-slate-900 font-bold text-lg mb-3">
-                {tip.title}
-              </h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                {tip.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 3. What Our Customers Say Section */}
-      <section className="w-full py-20 px-6 md:px-16 bg-white flex flex-col items-center justify-center">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">
-            What Our Customers Say
-          </h2>
-        </div>
-
-        <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((item, index) => (
-            <div
-              key={index}
-              className="bg-slate-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200 border border-slate-100 flex flex-col items-start text-left"
-            >
-              {/* Star Rating Icons */}
-              <div className="flex items-center gap-1 mb-4 text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className="text-base" />
-                ))}
-              </div>
-
-              {/* Quote */}
-              <p className="text-slate-700 italic text-sm md:text-base leading-relaxed mb-6">
-                &ldquo;{item.quote}&rdquo;
-              </p>
-
-              {/* Author */}
-              <span className="text-slate-900 font-bold text-sm mt-auto">
-                - {item.author}
-              </span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-    </div>
+      </div>
+    </section>
   );
 }

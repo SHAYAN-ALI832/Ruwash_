@@ -1,7 +1,7 @@
 import Hero from '../sections/hero.jsx';    
 import Products from '../sections/products.jsx';
 import About from '../sections/about.jsx';
-import Wheretobuy from '../sections/wheretobuy.jsx';
+import Wheretobuy from '../sections/whyRuwash.jsx';
 import ContactAndFooter from '../sections/contact.jsx';
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
       </div>
 
       {/* Where To Buy */}
-      <div id="where-to-buy">
+      <div id="whyRuwash">
         <Wheretobuy />
       </div>
 
