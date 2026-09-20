@@ -21,7 +21,7 @@ export default function Footer() {
             </p>
             <p className="mt-3 text-sm leading-relaxed text-sky-200">
               Washing powder &amp; beauty soap by ARS Enterprise. Packed and
-              marketed in Mardan, Khyber Pakhtunkhwa.
+              marketed in Swabi, Khyber Pakhtunkhwa.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export default function Footer() {
                   {column.links.map((link) => (
                     <li key={link}>
                       <a
-                        href="#"
+                        href="#home"
                         className="text-sm text-sky-200 transition hover:text-white"
                       >
                         {link}

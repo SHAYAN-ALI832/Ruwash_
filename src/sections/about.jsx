@@ -1,5 +1,5 @@
 import { Droplet, Clock, Heart, Waves, Wind, ArrowLeft } from "lucide-react";
-import Soap from '../assets/Soap1.jpeg';
+import Soap from '../assets/soap1.jpeg';
 
 const FEATURES = [
   {

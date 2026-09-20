@@ -98,7 +98,7 @@ export default function TransparencyAndContact() {
             </svg>
             <p className="mt-4 max-w-md text-slate-600">
               Questions about stockists, bulk orders, or the product line?
-              The team based in Mardan is happy to help.
+              The team based in Swabi is happy to help.
             </p>
           </div>
 
@@ -132,7 +132,7 @@ export default function TransparencyAndContact() {
                 </span>
                 <div>
                   <p className="text-sm font-bold text-slate-900">
-                    0319 5270137 / 0341 2366868
+                    03359126741
                   </p>
                   <p className="text-sm text-slate-600">
                     Call for orders &amp; stockist enquiries
@@ -146,7 +146,7 @@ export default function TransparencyAndContact() {
                 </span>
                 <div>
                   <p className="text-sm font-bold text-slate-900">
-                    umairraziq111@gmail.com
+                    ruwash530@gmail.com
                   </p>
                   <p className="text-sm text-slate-600">
                     Email for enquiries

@@ -24,8 +24,8 @@ const SOAP_FEATURES = [
 ];
 
 const SOAP_VARIANTS = [
-  { label: "Milk & Lily", color: "bg-[#3b9eff]" },
-  { label: "Milk & Rose", color: "bg-[#f472b6]" },
+  { label: "Peach", color: "bg-[#FDBA8C]" },
+  { label: "Rose", color: "bg-[#F472B6]" },
 ];
 
 export default function ProductRange() {
@@ -144,7 +144,7 @@ export default function ProductRange() {
 
               {/* Net Weight */}
               <p className="mt-9 text-[26px] font-extrabold text-[#003d7a]">
-                2kg{" "}
+                1kg{" "}
                 <span className="ml-1 text-[13px] font-bold uppercase tracking-[1px] text-slate-500">
                   Net Weight Pack
                 </span>
